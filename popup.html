@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>智能简历生成器</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>智能简历生成器</h1>
+    <div class="input-section">
+      <div class="form-group">
+        <label for="job-title">岗位名称:</label>
+        <input type="text" id="job-title" placeholder="在此输入岗位名称">
+      </div>
+      <div class="form-group">
+        <label for="job-description">岗位信息:</label>
+        <textarea id="job-description" placeholder="在此粘贴岗位职责、要求等详细信息..."></textarea>
+      </div>
+    </div>
+    
+    <div class="settings-section">
+      <h3>个人信息</h3>
+      <div class="form-group">
+        <label for="user-name">姓名:</label>
+        <input type="text" id="user-name">
+      </div>
+      <div class="form-group">
+        <label for="user-contact">联系方式:</label>
+        <input type="text" id="user-contact">
+      </div>
+    </div>
+
+    <div class="button-row">
+      <button id="generate-btn">生成简历</button>
+    </div>
+    
+    <div id="status-msg" class="status-message"></div>
+    <div class="progress-container" id="progress-container" style="display: none;">
+      <div class="progress-bar" id="progress-bar"></div>
+      <div class="progress-text" id="progress-text">0%</div>
+    </div>
+
+    
+    <div class="result-section" id="result-section" style="display: none;">
+      <h3>生成的简历预览</h3>
+      <div id="resume-preview" class="resume-preview"></div>
+      <div class="button-row">
+        <button id="copy-btn">一键复制</button>
+        <button id="download-btn">免费生成</button>
+        <!-- 删除或隐藏以下按钮（如果存在） -->
+        <!-- <button id="open-file-btn" style="display: none;">打开文件位置</button> -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="docx.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

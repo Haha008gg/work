@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>智能简历生成器 - 设置</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .status-message {
+      margin: 10px 0;
+      padding: 10px;
+      border-radius: 4px;
+    }
+    .status-message.success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .status-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>智能简历生成器 - 设置</h1>
+    
+    <div class="form-group">
+      <label for="api-key">SiliconFlow API Key:</label>
+      <input type="password" id="api-key" placeholder="输入您的SiliconFlow API密钥">
+    </div>
+    
+    <div class="form-group">
+      <label for="user-name">默认姓名:</label>
+      <input type="text" id="user-name" placeholder="输入您的姓名">
+    </div>
+    
+    <div class="form-group">
+      <label for="user-contact">默认联系方式:</label>
+      <input type="text" id="user-contact" placeholder="输入您的联系方式">
+    </div>
+    
+    <button id="save-btn">保存设置</button>
+    <button id="apply-free-btn" style="margin-left: 10px; background-color: #27ae60;">点我免费申请</button>
+    
+    <div id="status" class="status-message" style="display: none;"></div>
+  </div>
+  
+  <script src="options.js"></script>
+</body>
+</html>

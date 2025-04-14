@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "智能简历生成器",
+  "version": "1.0",
+  "description": "基于招聘信息智能创建匹配的简历",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icon16.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    }
+  },
+  "permissions": [
+    "storage",
+    "downloads",
+    "downloads.open"
+  ],
+  "host_permissions": [
+    "https://api.siliconflow.cn/*"
+  ],
+  "options_page": "options.html",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "web_accessible_resources": [{
+    "resources": ["docx.js"],
+    "matches": ["<all_urls>"]
+  }]
+}
